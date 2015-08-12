@@ -1,6 +1,6 @@
 # vim-b-html
 
-b-html syntaxt highlighting for vim.
+[b-html](https://github.com/b-html/b-html) syntaxt highlighting for vim.
 
 # Installation
 
