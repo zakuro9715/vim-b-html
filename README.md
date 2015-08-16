@@ -1,10 +1,10 @@
 # vim-b-html
 
-[b-html](https://github.com/b-html/b-html) syntaxt highlighting for vim.
+[b-html](https://github.com/b-html/b-html) syntax highlighting for vim.
 
 # Installation
 
-You can install copy and paste this code to your `.vimrc` 
+You can install copy and paste this code to your `.vimrc`
 if you installed neobundle.vim.[neobundle.vim](https://github.com/Shouago/neobundle.vim)
 
 ```vim
