@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     b-htmL
 " Maintainer:   YuZakuro <zakuro@yuzakuro.me>
-" Last Change:  2015 Aug 13
+" Last Change:  2015 Aug 19
 
 if exists("b:current_syntax")
   finish
@@ -20,7 +20,9 @@ syn include @html syntax/html.vim
 let b:current_syntax = 'bhtml'
 
 
-syn region bhtmlComment start=/<!/ end=/$/
+syn region bhtmlComment      start=/<!--/ end=/$/
+syn region bhtmlDoctype      start=/<!doctype/ end=/$/
+syn region bhtmlCommentError start=/<!\(\(--\)\|\(doctype\)\)\@!/ end=/$/
 
 syn region bhtmlEmptyElement start=/<\// end=/$/ 
 syn region bhtmlElement      start=/<[^!\/]/ end=/$/
@@ -32,6 +34,8 @@ syn region bhtmlNewLineText keepend start=/^\s*|/ end=/$/ contains=bhtmlTextInne
 syn region bhtmlTextInner contained start=/^\s*/ms=e+2 end=/$/ contains=@html
 
 hi def link bhtmlComment Comment
+hi def link bhtmlDoctype Comment
+hi def link bhtmlCommentError Error
 
 hi def link bhtmlEmptyElement bhtmlElement
 hi def link bhtmlElement      Statement
